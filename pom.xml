@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -17,28 +17,28 @@
 		<java.version>16</java.version>
 	</properties>
 
-<!--	<repositories>-->
-<!--		<repository>-->
-<!--			<id>my-private-repo</id>-->
-<!--			<url>http://my-private-repo.com</url>-->
-<!--			<releases>-->
-<!--				<enabled>true</enabled>-->
-<!--			</releases>-->
-<!--			<snapshots>-->
-<!--				<enabled>true</enabled>-->
-<!--			</snapshots>-->
-<!--		</repository>-->
-<!--	</repositories>-->
+	<!--	<repositories>-->
+	<!--		<repository>-->
+	<!--			<id>my-private-repo</id>-->
+	<!--			<url>http://my-private-repo.com</url>-->
+	<!--			<releases>-->
+	<!--				<enabled>true</enabled>-->
+	<!--			</releases>-->
+	<!--			<snapshots>-->
+	<!--				<enabled>true</enabled>-->
+	<!--			</snapshots>-->
+	<!--		</repository>-->
+	<!--	</repositories>-->
 
 	<dependencies>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--		</dependency>-->
+		<!--		<dependency>-->
+		<!--			<groupId>org.springframework.boot</groupId>-->
+		<!--			<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+		<!--		</dependency>-->
+		<!--		<dependency>-->
+		<!--			<groupId>org.springframework.boot</groupId>-->
+		<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+		<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -64,6 +64,10 @@
 			<version>RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -80,28 +84,28 @@
 					</excludes>
 				</configuration>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-archetype-plugin</artifactId>-->
-<!--				<version>3.2.0</version>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>generate-project</id>-->
-<!--						<goals>-->
-<!--							<goal>generate</goal>-->
-<!--						</goals>-->
-<!--						<configuration>-->
-<!--							<archetypeGroupId>com.example</archetypeGroupId>-->
-<!--							<archetypeArtifactId>my-spring-boot-starter</archetypeArtifactId>-->
-<!--							<archetypeVersion>1.0.0</archetypeVersion>-->
-<!--							<groupId>com.example</groupId>-->
-<!--							<artifactId>my-spring-boot-app</artifactId>-->
-<!--							<version>1.0.0-SNAPSHOT</version>-->
-<!--							<package>com.example.springboot</package>-->
-<!--						</configuration>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--			</plugin>-->
+			<!--			<plugin>-->
+			<!--				<groupId>org.apache.maven.plugins</groupId>-->
+			<!--				<artifactId>maven-archetype-plugin</artifactId>-->
+			<!--				<version>3.2.0</version>-->
+			<!--				<executions>-->
+			<!--					<execution>-->
+			<!--						<id>generate-project</id>-->
+			<!--						<goals>-->
+			<!--							<goal>generate</goal>-->
+			<!--						</goals>-->
+			<!--						<configuration>-->
+			<!--							<archetypeGroupId>com.example</archetypeGroupId>-->
+			<!--							<archetypeArtifactId>my-spring-boot-starter</archetypeArtifactId>-->
+			<!--							<archetypeVersion>1.0.0</archetypeVersion>-->
+			<!--							<groupId>com.example</groupId>-->
+			<!--							<artifactId>my-spring-boot-app</artifactId>-->
+			<!--							<version>1.0.0-SNAPSHOT</version>-->
+			<!--							<package>com.example.springboot</package>-->
+			<!--						</configuration>-->
+			<!--					</execution>-->
+			<!--				</executions>-->
+			<!--			</plugin>-->
 		</plugins>
 	</build>
-	</project>
+</project>

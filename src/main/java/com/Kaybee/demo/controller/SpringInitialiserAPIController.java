@@ -1,9 +1,9 @@
 package com.Kaybee.demo.controller;
 
-import com.Kaybee.demo.model.ProjectModel;
+//import com.Kaybee.demo.model.ProjectModel;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+//import org.springframework.web.bind.annotation.PostMapping;
+//import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.Kaybee.demo.constants.SpringAPIConstants;
 import java.io.File;
@@ -21,7 +21,7 @@ import java.util.zip.ZipInputStream;
 @RestController
 public class SpringInitialiserAPIController {
 //    @PostMapping(path="/springApi",consumes="application/json")
-    @GetMapping("/sapi")
+    @GetMapping("/SpringApi")
     public  void createBySpringInitAPI(
 //            @RequestBody ProjectModel model
     ) throws IOException {
@@ -63,10 +63,11 @@ public class SpringInitialiserAPIController {
 
             while (zipEntry != null) {
                 String filePath = System.getProperty("user.dir") + File.separator + zipEntry.getName();
+                Path dir = Paths.get(filePath);
                 if (zipEntry.isDirectory()) {
-                    Files.createDirectories(Paths.get(filePath));
+                    Files.createDirectories(dir);
                 } else {
-                    Path parent = Paths.get(filePath).getParent();
+                    Path parent = dir.getParent();
                     if (parent != null && Files.notExists(parent)) {
                         Files.createDirectories(parent);
                     }
